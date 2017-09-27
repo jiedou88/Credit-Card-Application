@@ -1,0 +1,240 @@
+﻿<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 		<title>int222_162a06 - Asgmt3</title>
+ 		<link rel="stylesheet" href="./css/normalize.css" type="text/css" media="screen"> 
+ 		<link rel="stylesheet" href="./css/sitecss.css" type="text/css" media="screen"> 
+ 		<script src='javascript/myscript.js' type='text/javascript'></script>
+	</head>
+	<body>
+		<div class="top">
+		<fieldset>
+			<legend class="mylgd"><img src="https://zenit.senecac.on.ca/~emile.ohan/int222/bank-logo.png" atl="seneca">Seneca Bank - Credit Card Application</legend>	
+			<form name="application" id="application" method="post" 
+                 action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/cardApplication.cgi"
+                 onsubmit="return validateForm();">
+
+			<div class="top_upper">
+				<fieldset class="fld1 info"><!--info-->
+					<legend class="mylgd1">Primary Applicant's Information</legend>
+						<span class="vertical">
+							<label >First Name</label>
+							<span class="redStar">*</span>
+							<input type="text" name="fName" id="fName" size="20" maxlength="20" autofocus> <br/>
+						</span>	
+						<span class="vertical">
+							<label >Surname</label>
+							<span class="redStar">*</span>
+							<input type="text" name="sName" id="sName" size="20" maxlength="30"> <br/>
+						</span>
+						<span class="vertical">
+								<label >Date of Birth</label>
+								<span class="redStar">*</span>
+								<input type="date" name="dob" id="dob" size="10" maxlength="7" placeholder="MMMYYYY"> <br/>
+						</span>
+						<span class="vertical">
+								<label >Email Address</label>
+								<span class="redStar">*</span>
+								<input type="text" name="email" id="email" size="20" maxlength="60"> <br/>
+						</span>
+						<span class="vertical">
+								<label >Phone No.</label>
+								<span class="redStar">*</span>
+								<input type="text" name="phone" id="phone" size="20" maxlength="12"> <br/>
+						</span>
+				</fieldset >
+				
+				<fieldset class="fld1 adr"><!--address-->
+					<legend class="mylgd1">Primary Applicant's Address</legend>
+						<div class="addleft"> 
+							<span class="vertical address">
+								<input type="text" name="address" id="address" size="30" maxlength="60"> <br/>
+								<label >Home Address
+								<span class="redStar">*</span>
+								</label>
+					        </span>	
+					   		 <span class="vertical address">
+								<input type="text" name="city" id="city" size="20" maxlength="40"> <br/>
+								<label >City
+								<span class="redStar">*</span>
+								</label>
+					   		 </span>
+
+
+
+						    <span class="vertical">
+								<select id="province" name="province" size="2">
+     							  <optgroup label="Province">
+     							    
+       								<option value="Alberta">Alberta</option>
+       								<option value="British Columbia">British Columbia</option>
+       								<option value="Manitoba">Manitoba</option>
+       								<option value="New Brunswick">New Brunswick</option>
+       								<option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+       								<option value="Nova Scotia">Nova Scotia</option>
+       								<option value="Ontario">Ontario</option>
+       								<option value="Prince Edward Island">PE</option>
+       								<option value="Quebec">Quebec</option>
+       								<option value="Saskatchewan">Saskatchewan</option>
+     							  </optgroup>
+     							  <optgroup label="Territory">
+       								<option value="Northwest Territories">Northwest Territories</option>
+       								<option value="Nunavut">Nunavut</option>
+       								<option value="Yukon">Yukon</option>
+     							  </optgroup>
+   								</select>
+								<br/>
+								<label >Province
+									<span class="redStar">*</span>
+								</label>
+						    </span>
+							<span>
+								
+							</span>
+						</div>
+
+						<div class="addright"> 
+								<span class="vertical address">
+									<input type="text" name="apt" id="apt" size="5" maxlength="4"> <br/>
+									<label >Apt</label>
+					 		   </span>	
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   <br>
+					 		   
+							<span class="vertical address">
+								<input type="text" name="postal" id="postal" size="8" maxlength="7" placeholder="ANA NAN"> <br/>
+								<label >Postal Code</label>
+						    </span>	
+						</div>
+						
+					    
+
+				</fieldset>
+
+				<fieldset class="fld1"> <!--house-->
+					<legend class="mylgd1">Housing Status</legend>
+					  
+					<div class="housetop">
+
+						<div class="payment">
+							<input type="text" name="payment" id="payment" size="8" maxlength="6"/>
+							<span>$Monthly Payment</span>
+							<span class="redStar">*</span>
+						</div>
+					  <div class="doyou">Do You<br><!--Javesp func-->
+						<input type="checkbox" name="hStatus" id="s01" value="Own" onclick="validateCheckbox1();" />Own the property
+						<input type="checkbox" name="hStatus" id="s02" value="Rent" onclick="validateCheckbox2();"/>Rent the property
+												
+					  </div>
+				
+					</div>
+					<div class="housev">
+                    	<label class="monpaylb">Monthly Income</label>
+						<span class="redStar">*</span>
+						<input type="text" name="income" id="income" size="8" maxlength="6"/>
+					</div>
+					
+					<!--loction-->
+					<div class="housev">
+						<label class="monpaylb">Years at current location</label>
+						<span class="redStar">*</span>
+						<input type="text" name="currYears" id="currYears" size="3" maxlength="2"/>
+					</div>
+					<!--authori-->
+					<div class="housev">
+						<label class="monpaylb">Pre-authorized Code</label>
+						<span class="redStar">*</span>
+						<input type="text" name="preCode" id="preCode" size="3" />
+					</div>					
+
+				</fieldset>
+			</div>
+
+
+
+
+
+			<div class="top_bottom">
+				
+					<fieldset class="fld1"><!--check,jsp func-->
+						<legend class="mylgd1">Credit Check /Email Consent</legend>
+							<div class="chkdiv">I consent to have a credit check performed<br>
+								<input type="checkbox" name="creditCheck" id="c01" value="Yes" onclick="validateCheckboxc01();"/>Yes
+   								<input type="checkbox" name="creditCheck" id="c02" value="No" onclick="validateCheckboxc02();"/>No
+												
+					    	 </div>
+
+                            <div class="chkdiv">I consent to have email messages sent to me<br>
+								<input type="radio" name="emailConsent" id="m01" value="Yes" />Yes
+   								<input type="radio" name="emailConsent" id="m02" value="No" />No
+												
+					    	</div>
+					    	<div class="chkdiv">
+					    	   
+					    	   <script>
+                        		var d = new Date(); // Get document last modified date
+                        		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+								var nm = months[d.getMonth()];
+                        		var nd = d.getDate();
+                        		var ny = d.getFullYear();
+                        		document.write("Submitted on : " + nm + " " + nd + ", " + ny);
+                        	   </script>
+					    	</div>
+					    	<div class="chkdiv">
+
+					    		<label>Ref. #</label>
+								<input type="text" name="refNo" id="refNo" size="8" readonly/>	
+                                <input type="hidden" name="hName" id="hName" value="Jie"/>
+                                <input type="hidden" name="hId" id="hId" value="int222_162a06" />
+					    	</div>
+
+					    	<div class="blackline chkdiv"></div>
+					    	<div class="chkdiv ">
+					    		<input type="submit" value="Submit Application"/> 
+					    		<input type="reset" value="Start Over"/> <br>
+					    		<span>
+					    			<span class="redStar">*</span>
+					    			 =required information
+					    		</span>
+					    	</div>
+
+					</fieldset>
+
+					<fieldset class="fld2"><!--reserve ERROR REPORT-->
+						<legend class="mylgd1">Reserved - See below</legend>
+						<p ></p>
+						<p id ="errors" class="reservp">If you submit your application with errors and/or omissions, a list of errors and/or omissions will 
+show here. Make the corrections and re-submit.<br><br>
+						If you continue to have a problem submitting your application, make a note of the Reference No. 
+and call us at 1-800-010-2000.</p>
+					</fieldset>
+
+			</div>
+		</form>
+		</fieldset>
+		<footer>
+			<ul>
+				<li><a href="../">My Zenit Accout</a></li>
+				<li><a href="javascript/">My JavaScript</a></li>
+				<li><a href="css/sitecss.css">My CSS</a></li>
+				<li><a href="honesty.html">My Honest</a></li>
+			</ul>
+			<br>
+			<script>
+            var dt = new Date(document.lastModified); // Get document last modified date
+            document.write('This page was last updated on ' + dt.toLocaleString());
+            </script>
+		</footer>
+		</div>
+		
+			
+		</div>		
+	</body>
+
+</html>

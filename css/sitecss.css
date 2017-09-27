@@ -1,0 +1,148 @@
+.top{
+	background-color: #e8e8ea;
+	color: black;
+	width: 1100px;
+	height:715px;
+	font-size: 15px;
+
+}
+.top_upper fieldset{
+	width:300px;
+	height: 270px;
+	float: left;
+}
+.mylgd{
+	border:solid 2px black;
+	background-color: #D0EAF2;
+	color: white;
+	font-size: 45px;
+
+}
+.mylgd1
+{
+	border:solid 2px black;
+	background-color: #D0EAF2;
+	color: white;
+	font-size: 20px;
+
+}
+.redStar{
+	color: red;
+	background-color: #e8e8ea
+}
+
+.info{
+	width:310;
+}
+.adr{
+	width:400px;
+}
+
+fieldset label{
+	display: inline-block;
+	width: 90px;
+}
+.vertical{
+	display: block;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+.address{
+	float: left;
+}
+.flt{
+	overflow: auto;
+	float: left;
+}
+.top_bottom .fld1{
+	width: 300px;
+	height: 270px;
+	float: left;
+}
+.top_bottom .fld2{
+	width: 600px;
+	height: 270px;
+	float: left;
+    overflow-y: scroll;
+}
+.addleft{
+	width: 170px;
+	height: 250px;
+	float: left;
+	
+}
+#address{
+ width: 160px;	
+}
+#city{
+ width: 130px;	
+}
+.addright{
+	width: 90px;
+	height: 250px;
+	float: left;
+}
+
+#province{
+	width: 135px;
+}
+.doyou{
+	width:140px;	
+	height:65px;
+}
+.payment{
+	margin-top: 10px;
+	height:65px;
+	width: 130px;
+	clear: both;
+	float: right;
+}
+.housetop{
+	float: left;
+	width: 320px;
+	height:65px;
+}
+.monpaylb{
+	
+    width: 180px;
+}
+.housev{
+	margin-top: 35px;
+}
+.chkdiv{
+	margin-top: 10px;
+}
+.blackline{
+	background-color: black;
+	color:black;
+	width: 280px;
+	height: 1px;
+
+}
+.reservp{
+	color: black;
+	background-color: white;
+	font: bold;
+	font-size: 16px;
+	
+
+}
+footer ul{
+	list-style: none;
+	display: inline-block;
+}
+footer ul li{
+	display: inline-block;
+	margin-right: 30px;
+}
+footer{
+	text-align: center;
+}
+.honest{
+	background-color: #e8e8ea;
+	color: black;
+	width: 1100px;
+	height:300px;
+	font-size: 15px;
+
+}
